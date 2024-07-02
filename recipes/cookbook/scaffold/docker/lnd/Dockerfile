@@ -1,7 +1,7 @@
 ARG LND_DOCKER_BUILDTIME_IMAGE
 ARG LND_DOCKER_RUNTIME_IMAGE
 
-FROM ${LND_DOCKER_BUILDTIME_IMAGE} as simverse_buildtime_lnd
+FROM ${LND_DOCKER_BUILDTIME_IMAGE} AS simverse_buildtime_lnd
 
 #include BASE_DOCKERFILE_SNIPPET
 #include BUILDTIME_DOCKERFILE_SNIPPET
@@ -20,7 +20,7 @@ RUN make && make install
 
 # ---------------------------------------------------------------------------------------------------------------------------
 
-FROM ${LND_DOCKER_RUNTIME_IMAGE} as simverse_runtime_lnd
+FROM ${LND_DOCKER_RUNTIME_IMAGE} AS simverse_runtime_lnd
 
 #include BASE_DOCKERFILE_SNIPPET
 #include RUNTIME_DOCKERFILE_SNIPPET

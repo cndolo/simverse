@@ -1,7 +1,7 @@
 ARG BITCOIND_DOCKER_BUILDTIME_IMAGE
 ARG BITCOIND_DOCKER_RUNTIME_IMAGE
 
-FROM ${BITCOIND_DOCKER_BUILDTIME_IMAGE} as simverse_buildtime_bitcoind
+FROM ${BITCOIND_DOCKER_BUILDTIME_IMAGE} AS simverse_buildtime_bitcoind
 
 #include BASE_DOCKERFILE_SNIPPET
 #include BUILDTIME_DOCKERFILE_SNIPPET
@@ -31,7 +31,7 @@ RUN make install
 
 # ---------------------------------------------------------------------------------------------------------------------------
 
-FROM ${BITCOIND_DOCKER_RUNTIME_IMAGE} as simverse_runtime_bitcoind
+FROM ${BITCOIND_DOCKER_RUNTIME_IMAGE} AS simverse_runtime_bitcoind
 
 #include BASE_DOCKERFILE_SNIPPET
 #include RUNTIME_DOCKERFILE_SNIPPET

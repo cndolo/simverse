@@ -8,4 +8,4 @@ if [[ ! -d "$VOLUMES_DIR" ]]; then
   mkdir -p "$VOLUMES_DIR"
 fi
 
-exec docker-compose "$@"
+exec docker compose "$@"

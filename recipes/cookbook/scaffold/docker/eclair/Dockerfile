@@ -3,7 +3,7 @@
 ARG ECLAIR_DOCKER_BUILDTIME_IMAGE
 ARG ECLAIR_DOCKER_RUNTIME_IMAGE
 
-FROM ${ECLAIR_DOCKER_BUILDTIME_IMAGE} as simverse_buildtime_eclair
+FROM ${ECLAIR_DOCKER_BUILDTIME_IMAGE} AS simverse_buildtime_eclair
 
 #include BASE_DOCKERFILE_SNIPPET
 #include BUILDTIME_DOCKERFILE_SNIPPET
@@ -56,7 +56,7 @@ RUN mvn package -pl eclair-node -am -DskipTests -Dgit.commit.id=notag -Dgit.comm
 
 # ---------------------------------------------------------------------------------------------------------------------------
 
-FROM ${ECLAIR_DOCKER_RUNTIME_IMAGE} as simverse_runtime_eclair
+FROM ${ECLAIR_DOCKER_RUNTIME_IMAGE} AS simverse_runtime_eclair
 
 #include BASE_DOCKERFILE_SNIPPET
 #include RUNTIME_DOCKERFILE_SNIPPET

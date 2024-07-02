@@ -13,7 +13,8 @@ libressl \
 jq \
 tini \
 tree \
-sqlite-libs
+sqlite-libs \
+openssl
 
 # TODO: move this into a special snippet to provide go debugging support
 # RUN go get -u github.com/go-delve/delve/cmd/dlv

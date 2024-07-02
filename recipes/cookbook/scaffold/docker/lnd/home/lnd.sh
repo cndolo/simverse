@@ -27,7 +27,6 @@ ZMQ_PUBRAWTX="tcp://$LND_BITCOIN_RPC_HOST:$ZMQ_PUBRAWTX_PORT"
 PARAMS=""
 
 if [[ -n "$LND_CHAIN" ]]; then
-  PARAMS+=" --$LND_CHAIN.active"
   PARAMS+=" --$LND_CHAIN.regtest"
   PARAMS+=" --$LND_CHAIN.node=$LND_BACKEND"
 fi

@@ -1,7 +1,7 @@
 ARG BTCD_DOCKER_BUILDTIME_IMAGE
 ARG BTCD_DOCKER_RUNTIME_IMAGE
 
-FROM ${BTCD_DOCKER_BUILDTIME_IMAGE} as simverse_buildtime_btcwallet
+FROM ${BTCD_DOCKER_BUILDTIME_IMAGE} AS simverse_buildtime_btcwallet
 
 #include BASE_DOCKERFILE_SNIPPET
 #include BUILDTIME_DOCKERFILE_SNIPPET
@@ -18,7 +18,7 @@ RUN GO111MODULE=on go install -v . ./cmd/...
 
 # ---------------------------------------------------------------------------------------------------------------------------
 
-FROM ${BTCD_DOCKER_BUILDTIME_IMAGE} as simverse_buildtime_btcd
+FROM ${BTCD_DOCKER_BUILDTIME_IMAGE} AS simverse_buildtime_btcd
 
 #include BASE_DOCKERFILE_SNIPPET
 #include BUILDTIME_DOCKERFILE_SNIPPET
@@ -45,7 +45,7 @@ RUN GO111MODULE=on go install -v . ./cmd/...
 
 # ---------------------------------------------------------------------------------------------------------------------------
 
-FROM ${BTCD_DOCKER_RUNTIME_IMAGE} as simverse_runtime_btcd
+FROM ${BTCD_DOCKER_RUNTIME_IMAGE} AS simverse_runtime_btcd
 
 #include BASE_DOCKERFILE_SNIPPET
 #include RUNTIME_DOCKERFILE_SNIPPET

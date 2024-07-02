@@ -132,7 +132,7 @@ is_btcd_master() {
 get_flavor() {
   local person=${1:?required}
   local container
-  container=$(docker-compose ps -q "$person")
+  container=$(docker compose ps -q "$person")
   if [[ -z "$container" ]]; then
     echo_err "unable to lookup container for for '$person'"
     exit 1
@@ -151,7 +151,7 @@ get_flavor() {
 get_role() {
   local person=${1:?required}
   local container
-  container=$(docker-compose ps -q "$person")
+  container=$(docker compose ps -q "$person")
   if [[ -z "$container" ]]; then
     echo_err "unable to lookup container for for '$person'"
     exit 1

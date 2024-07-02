@@ -22,6 +22,7 @@ boost-program_options \
 boost-filesystem \
 boost-dev \
 libressl-dev \
+openssl \
 libevent-dev \
 zeromq-dev \
 sqlite-dev
